@@ -91,7 +91,7 @@ export default {
       officials: [],
       phone2actionApiUrl:
         "https://q4ktfaysw3.execute-api.us-east-1.amazonaws.com/treehacks/legislators",
-      phone2actionApiKey: "2e1uvo7yeX50ZGHvctPxi8ZWubhggyOydIWvOa5c",
+      phone2actionApiKey: "{ TEXT 'TREEHACKS' TO 52886 TO GET THIS KEY",
       chosenState: "",
       states: [
         "Alabama",
