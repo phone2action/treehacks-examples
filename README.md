@@ -24,6 +24,15 @@ GET
 **Optional:**
 `level=[string]`
 
+Including a level parameter will filter the legislators result to that level only. Level can be any of the following:
+
+- `NATIONAL_EXEC` : Refers to the President, VP, etc
+- `NATIONAL_UPPER` : Refers to U.S. Senate Senators
+- `NATIONAL_LOWER` : Refers to U.S. Congress members
+- `STATE_EXEC` : Refers to state Governors
+- `STATE_UPPER` : Refers to state Senators
+- `STATE_LOWER` : Refers to state Congress members
+
 ### **Success Response:**
 
 **Code:** 200 <br />
