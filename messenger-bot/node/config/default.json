@@ -1,0 +1,7 @@
+{
+  "appSecret": "GET FROM FACEBOOK APP DASHBOARD",
+  "pageAccessToken": "GET FROM FACEBOOK APP DASHBOARD",
+  "validationToken": "TOKEN",
+  "serverURL": "to_be_set_manually",
+  "phone2actionAccessToken": "GET BY TEXTING 'TREEHACKS' TO 52886"
+}
