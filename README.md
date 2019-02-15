@@ -18,6 +18,10 @@ https://q4ktfaysw3.execute-api.us-east-1.amazonaws.com/treehacks/legislators
 GET
 ```
 
+### **Authentication:**
+
+To get your API token, you must text "TREEHACKS" to 52886. We will ask for your name and email address for identification purposes, then you'll get a response with an API token. Use that API token in the `X-API-Key` header of your requests.
+
 ### **URL Params**
 
 **Required:**
