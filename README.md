@@ -4,7 +4,7 @@
 
 Welcome to the Phone2Action Legislators API. We have opened up one of our core APIs for you to use. Phone2Action aggregates legislator data from many multiple sources to create the most complete legislator's database available. You'll be able to use this data to your advantage for your TreeHacks projects.
 
-Read more about our challenge, mission, past hackathon winners here: [Phone2Action TreeHacks](http://treehacks.phone2action.com){:target="\_blank" rel="noopener"}
+Read more about our challenge, mission, past hackathon winners here: [Phone2Action TreeHacks](http://treehacks.phone2action.com)
 
 ### **URL**
 
