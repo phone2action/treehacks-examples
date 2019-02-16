@@ -61,7 +61,7 @@ Including a level parameter will filter the legislators result to that level onl
 ### **Sample Call:**
 
 ```
-https://llqi9q94si.execute-api.us-east-1.amazonaws.com/dev/legislators?address=450+Serra+Mall,+Stanford,+CA+94305&level=NATIONAL_LOWER
+https://q4ktfaysw3.execute-api.us-east-1.amazonaws.com/treehacks/legislators?address=450+Serra+Mall,+Stanford,+CA+94305&level=NATIONAL_LOWER
 
 ```
 
