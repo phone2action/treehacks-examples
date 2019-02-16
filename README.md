@@ -11,7 +11,7 @@ We've provide you with a couple examples:
 1. A Node.JS Messenger bot that when an user types an address it returns their U.S. Senators
 2. A Vue.JS app that returns all legislators for a given state
 
-**Feel free to build off of these or go your own way. Phone2Action does not require you to use our API or the starter templates/ideas to win our prize. We give you complete control over that!**
+**Feel free to build off of these or go your own way. Phone2Action does not require you to use our API or the starter templates/ideas to win our prize. We give you complete control over that! Just make sure it has an aspect that helps people become more civically engaged.**
 
 ### **URL**
 
