@@ -6,6 +6,13 @@ Welcome to the Phone2Action Legislators API. We have opened up one of our core A
 
 Read more about our challenge, mission, past hackathon winners here: [Phone2Action TreeHacks](http://treehacks.phone2action.com)
 
+We've provide you with a couple examples:
+
+1. A Node.JS Messenger bot that when an user types an address it returns their U.S. Senators
+2. A Vue.JS app that returns all legislators for a given state
+
+**Feel free to build off of these or go your own way. Phone2Action does not require you to use our API or the starter templates/ideas to win our prize. We give you complete control over that!**
+
 ### **URL**
 
 ```
