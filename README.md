@@ -1,4 +1,4 @@
-# treehacks-examples
+# HackTJ Examples
 
 ## **Legislators API**
 
