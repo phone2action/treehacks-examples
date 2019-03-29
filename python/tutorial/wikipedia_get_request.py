@@ -4,7 +4,9 @@ import requests
 # We use the `json` module to format our response's data
 import json
 
-base_API = 'https://en.wikipedia.org/w/api.php'
+# First, we define our base URL and our parameters
+# Our parameters can be a Dictionary, since the `requests` module converts them
+base_URL = 'https://en.wikipedia.org/w/api.php'
 parameters = {
   'format': 'json',
   'action': 'query',
@@ -15,9 +17,14 @@ parameters = {
   'titles': 'tjhsst'
 }
 
+# Now, we're able to finre the configured HTTP GET request
 response = requests.get(base_API, params=parameters)
+
+# Next, we convert the response to a JSON with `json.loads()`
 pages = json.loads(response.text)['query']['pages']
 
+# Finally, we pick out the data we want and print it to the console
+# Use Postman to figure out what format your data is in and access it accordingly
 for key in pages.keys():
     print('Full Title: ' + pages[key]['title'])
     print('')
