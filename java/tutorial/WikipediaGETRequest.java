@@ -13,7 +13,7 @@ public class WikipediaGETRequest {
    public static void main(String[] args) throws IOException {
       // First, we construct the URL we'll make our HTTP GET Request to:
       String baseAPI = "https://en.wikipedia.org/w/api.php";
-      String parameters = "?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=";
+      String parameters = "?format=json&action=query&redirects=1&prop=extracts&exintro=1&explaintext=1&titles=";
       String articleTitle = "tjhsst"; // This can be any article title!
       String articleTitleFormatted = URLEncoder.encode(articleTitle, "UTF-8"); // This formats the article title for our URL
       URL wikipediaURL = new URL(baseAPI + parameters + articleTitleFormatted); // This is the Java URL class, necessary here
@@ -40,8 +40,10 @@ public class WikipediaGETRequest {
          JsonObject responsePageObject = responsePageMember.getValue().asObject(); // We convert the key's value to a JsonObject
          String fullTitle = responsePageObject.get("title").asString();
          System.out.println("Full Title: " + fullTitle);
+         System.out.println();
          String introduction = responsePageObject.get("extract").asString();
-         System.out.println("Introduction: " + introduction.replaceAll("\n", "  "));
+         System.out.println("Introduction: " + introduction.replaceAll("\n", " "));
+         System.out.println();
       }
    }
 }
