@@ -15,7 +15,8 @@ public class WikipediaGETRequest {
       String baseAPI = "https://en.wikipedia.org/w/api.php";
       String parameters = "?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=";
       String articleTitle = "tjhsst"; // This can be any article title!
-      URL wikipediaURL = new URL(baseAPI + parameters + articleTitle); // This is the Java URL class, necessary here
+      String articleTitleFormatted = URLEncoder.encode(articleTitle, "UTF-8"); // This formats the article title for our URL
+      URL wikipediaURL = new URL(baseAPI + parameters + articleTitleFormatted); // This is the Java URL class, necessary here
 
       // Then, we set up the HTTP GET Request itself
       HttpURLConnection connection = (HttpURLConnection) wikipediaURL.openConnection();
