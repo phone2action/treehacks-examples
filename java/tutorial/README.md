@@ -2,8 +2,8 @@
 
 ## Instructions: 
 
-Compile `WikipediaGETRequest.java` and run; you should see Wikipedia information for TJHSST print to your console.
+Compile and run `WikipediaGETRequest.java`; you should see Wikipedia information for TJHSST print to your console.
 
 ## Note: 
 
-We're using the Minimal JSON package to parse our JSON objects; the source is (here)[https://github.com/ralfstx/minimal-json].
+We're using the Minimal JSON package to parse our JSON objects; information on how to use Minimal JSON [here](https://github.com/ralfstx/minimal-json).
