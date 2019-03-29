@@ -1,7 +1,7 @@
-# We use the `requests` module to make our HTTP Request 
+# We'll use the `requests` module to make our HTTP Request 
 import requests
 
-# We use the `json` module to format our response's data
+# We'll use the `json` module to format our response's data
 import json
 
 # First, we define our base URL and our parameters
@@ -17,8 +17,8 @@ parameters = {
   'titles': 'tjhsst'
 }
 
-# Now, we're able to finre the configured HTTP GET request
-response = requests.get(base_API, params=parameters)
+# Now, we're able to fire the configured HTTP GET request
+response = requests.get(base_URL, params=parameters)
 
 # Next, we convert the response to a JSON with `json.loads()`
 pages = json.loads(response.text)['query']['pages']
