@@ -2,5 +2,9 @@
 java/.DS_Store
 
 *.class
+node_modules
+
+node/tutorial/package.json
+node/tutorial/yarn.lock
 
 .vscode
