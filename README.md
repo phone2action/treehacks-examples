@@ -1,4 +1,4 @@
-# Phone2Action × HackTJ
+# HackTJ × Phone2Action
 
 ## **Code Examples and Sample Apps**
 
