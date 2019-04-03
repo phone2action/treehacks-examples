@@ -8,13 +8,13 @@ Compile and run `WikipediaGETRequest.java`; you should see Wikipedia information
 
 First, make sure you have a valid Phone2Action API Key. If you don't have one, text `HACKTJ19` to `52886` on your phone to receive yours. Then, in line 15 of `Phone2ActionGETRequest.java`. change the `xAPIKey` String to your Phone2Action API Key.
 
-So, if your Phone2Action API Key is `"abcdefg"`, line 15 in `Phone2ActionGETRequest.java` should look something like this:
+So, if your Phone2Action API Key is `abcdefg`, line 15 in `Phone2ActionGETRequest.java` should look something like this:
 
 ```
-      String xAPIKey = "abcdefg";
+String xAPIKey = "abcdefg";
 ```
 
-Compile and run `Phone2ActionGETRequest.java`; you should see information about your Representative in national Congress print to your console.
+Compile and run `Phone2ActionGETRequest.java`; you should see information about the Representative in national Congress for TJHSST's district print to your console.
 
 ## Note: 
 
