@@ -38,6 +38,7 @@ public class Phone2ActionGETRequest {
 
       // Finally, we pick out the data we want and print it to the console
       // Use Postman to figure out what format your data is in and access it accordingly
+      // A sample JSON is also available at https://github.com/phone2action/hacktj-examples#legislators-api
       JsonArray responseRepresentatives = responseObject.get("officials").asArray();
       // We don't know what each of the keys of the response's pages will be, so we loop through all of them
       for (JsonValue responseRepresentative : responseRepresentatives) { // Each key is a Member object, provided by Minimal JSON

@@ -29,6 +29,7 @@ representatives = json.loads(response.text)['officials']
 
 # Finally, we pick out the data we want and print it to the console
 # Use Postman to figure out what format your data is in and access it accordingly
+# A sample JSON is also available at https://github.com/phone2action/hacktj-examples#legislators-api
 for representative in representatives:
     first_name = representative['first_name']
     last_name = representative['last_name']
