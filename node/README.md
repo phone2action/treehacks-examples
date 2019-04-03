@@ -1,3 +1,7 @@
+# Sample Code
+
+We have two sample apps in the `examples` directory, check them out!
+
 # NodeJS GET Requests
 
 ## Wikipedia API GET Request: 
