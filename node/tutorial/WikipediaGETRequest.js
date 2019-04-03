@@ -1,7 +1,6 @@
 // We'll use Axios to make our HTTP Request, install with NPM or Yarn!
 var Axios = require('axios')
 
-
 // First, we define our base URL and our parameters
 // Our parameters can be a JSON, since Axios will convert them
 var baseURL = 'https://en.wikipedia.org/w/api.php'
