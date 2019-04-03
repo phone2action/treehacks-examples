@@ -14,7 +14,7 @@ So, if your Phone2Action API Key is `abcdefg`, line 9 in `phone2action_get_reque
 x_api_key = 'abcdefg'
 ```
 
-Run `Phone2ActionGETRequest.java`; you should see information about the Representative in national Congress for TJHSST's district print to your console.
+Run `phone2action_get_request.py`; you should see information about the Representative in national Congress for TJHSST's district print to your console.
 
 ## Note: 
 

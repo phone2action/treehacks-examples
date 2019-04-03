@@ -90,8 +90,8 @@ export default {
       errorMessage: "",
       officials: [],
       phone2actionApiUrl:
-        "https://q4ktfaysw3.execute-api.us-east-1.amazonaws.com/treehacks/legislators",
-      phone2actionApiKey: "{ TEXT 'TREEHACKS' TO 52886 TO GET THIS KEY",
+        "https://fmrrixuk32.execute-api.us-east-1.amazonaws.com/hacktj/legislators",
+      phone2actionApiKey: "",
       chosenState: "",
       states: [
         "Alabama",

@@ -23,4 +23,4 @@ Run `Phone2ActionGETRequest.js`; you should see information about the Representa
 
 ## Note: 
 
-[Axios](https://github.com/axios/axios) is an external dependency which we use to make our HTTP requests. You can install it with [NPM](https://www.npmjs.com/get-npm) (`npm install axios`) or, preferably, [Yarn](https://yarnpkg.com/en/docs/install) ('yarn add axios`). If Axios isn't running properly on your system, these programs won't run.
+[Axios](https://github.com/axios/axios) is an external dependency which we use to make our HTTP requests. You can install it with [NPM](https://www.npmjs.com/get-npm) (`npm install axios`) or, preferably, [Yarn](https://yarnpkg.com/en/docs/install) (`yarn add axios`). If Axios isn't running properly on your system, these programs won't run.
