@@ -7,7 +7,7 @@ In order to use this, you'll need to know some NodeJS, and basic command line te
 
 ## Project setup
 
-This example requires some dependencies, which you can install with [NPM](https://www.npmjs.com/get-npm) (`npm install axios`) or, preferably, [Yarn](https://yarnpkg.com/en/docs/install) (`yarn add axios`).
+This example requires some dependencies, which you can install with [NPM](https://www.npmjs.com/get-npm) or, preferably, [Yarn](https://yarnpkg.com/en/docs/install).
 
 ```
 npm install
