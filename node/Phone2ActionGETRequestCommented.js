@@ -8,7 +8,7 @@ var parameters = {
   'address': '6560 Braddock Rd'
 }
 var headers = {
-  'X-API-Key': ''
+  'X-API-Key': xAPIKey
 } */
 
 /* Axios.get(baseURL, {
