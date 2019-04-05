@@ -1,0 +1,10 @@
+*.DS_Store
+java/.DS_Store
+
+*.class
+node_modules
+
+node/package.json
+node/yarn.lock
+
+.vscode

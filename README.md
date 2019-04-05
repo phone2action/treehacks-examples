@@ -1,22 +1,33 @@
-# treehacks-examples
+# HackTJ × Phone2Action
+
+## **Code Examples and Sample Apps**
+
+These are the code snippets we discuss in our workshop *Integrating Data from the Web Into Your App*; feel free to use these as a base for your project.
+
+* **Java**: [HTTP Requests](/java)
+* **Python**: [HTTP Requests](/python)
+* **NodeJS**: [HTTP Requests](/node)
+
+We also have a sample web app that uses the Phone2Action API, using VueJS:
+
+* **NodeJS** [Find Your Legislators](/node/examples/find-legislators-web)
 
 ## **Legislators API**
 
-Welcome to the Phone2Action Legislators API. We have opened up one of our core APIs for you to use. Phone2Action aggregates legislator data from many multiple sources to create the most complete legislator's database available. You'll be able to use this data to your advantage for your TreeHacks projects.
+We've opened up one of our core APIs for you to use. Phone2Action aggregates legislator data from many multiple sources to create the most complete legislators database available. You'll be able to use this data to your advantage for your HackTJ projects.
 
-Read more about our challenge, mission, past hackathon winners here: [Phone2Action TreeHacks](http://treehacks.phone2action.com)
+Here are some links to sample apps that use the Phone2Action API:
 
-We've provide you with a couple examples:
-
-1. A Node.JS Messenger bot that when an user types an address it returns their U.S. Senators
-2. A Vue.JS app that returns all legislators for a given state
+* **Java**: [Phone2Action HTTP Request](/java/Phone2ActionGETRequest.java)
+* **Python**: [Phone2Action HTTP Request](/python/phone2action_get_request.py)
+* **NodeJS**: [Phone2Action HTTP Request](/node/Phone2ActionGETRequest.js)
 
 **Feel free to build off of these or go your own way. Phone2Action does not require you to use our API or the starter templates/ideas to win our prize. We give you complete control over that! Just make sure it has an aspect that helps people become more civically engaged.**
 
-### **URL**
+### **API Endpoint**
 
 ```
-https://q4ktfaysw3.execute-api.us-east-1.amazonaws.com/treehacks/legislators
+https://fmrrixuk32.execute-api.us-east-1.amazonaws.com/hacktj/legislators
 ```
 
 ### **Method:**
@@ -27,42 +38,41 @@ GET
 
 ### **Authentication:**
 
-To get your API token, you must text "TREEHACKS" to 52886. We will ask for your name and email address for identification purposes, then you'll get a response with an API token. Use that API token in the `X-API-Key` header of your requests.
+To get your API key, text `HACKTJ19` to `52886`. Use that API key in the `X-API-Key` header of your requests. This is important; you won't be able to 
 
 ### **URL Params**
 
 **Required:**
-`address=[string]`
+* `address=String`
 
 **Optional:**
-`level=[string]`
+* `level=String`
 
 Including a level parameter will filter the legislators result to that level only. Level can be any of the following:
 
 - `NATIONAL_EXEC` : Refers to the President, VP, etc
-- `NATIONAL_UPPER` : Refers to U.S. Senate members
-- `NATIONAL_LOWER` : Refers to U.S. Congress members
-- `STATE_EXEC` : Refers to state governors
-- `STATE_UPPER` : Refers to state senators
-- `STATE_LOWER` : Refers to state congress members
+- `NATIONAL_UPPER` : Refers to US Senators
+- `NATIONAL_LOWER` : Refers to US Representatives (House)
+- `STATE_EXEC` : Refers to state Governors
+- `STATE_UPPER` : Refers to state Senators
+- `STATE_LOWER` : Refers to state Representatives
 
 ### **Success Response:**
 
-**Code:** 200 <br />
+**HTTP Code:** 200 <br />
 **Content:**
 
 ```
     {
-        number : [int],
-        officials: [array]
+        "number" : Int,
+        "officials": Array
     }
 ```
 
 ### **Sample Call:**
 
 ```
-https://q4ktfaysw3.execute-api.us-east-1.amazonaws.com/treehacks/legislators?address=450+Serra+Mall,+Stanford,+CA+94305&level=NATIONAL_LOWER
-
+https://fmrrixuk32.execute-api.us-east-1.amazonaws.com/hacktj/legislators?address=6560+Braddock+Rd&level=NATIONAL_UPPER
 ```
 
 **Response**
@@ -72,14 +82,14 @@ https://q4ktfaysw3.execute-api.us-east-1.amazonaws.com/treehacks/legislators?add
     "number": 1,
     "officials": [
         {
-            "id": 17506,
-            "first_name": "Anna",
-            "last_name": "Eshoo",
-            "nickname": "",
+            "id": 86746,
+            "first_name": "Donald",
+            "last_name": "Beyer",
+            "nickname": "Don",
             "salutation": "Honorable",
             "office_details": {
                 "position": "Representative",
-                "state": "CA",
+                "state": "VA",
                 "city": "",
                 "chamber_details": {
                     "name": "United States House of Representatives",
@@ -89,169 +99,171 @@ https://q4ktfaysw3.execute-api.us-east-1.amazonaws.com/treehacks/legislators?add
                     "election_frequency": "2 years"
                 },
                 "district": {
-                    "type": "",
+                    "type": "NATIONAL_LOWER",
                     "subtype": "LOWER",
+                    "id": "8",
                     "city": "",
-                    "state": "CA"
+                    "state": "VA"
                 }
             },
-            "term_start": "2013-01-03 00:00:00",
+            "term_start": "2017-01-03 00:00:00",
             "term_end": "2021-01-03 00:00:00",
             "party": "Democrat",
             "bio": [
-                "ESHOO, Anna Georges, a Representative from California; born in New Britain, Hartford County, Conn., December 13, 1942; A.A., Canada College, Redwood City, Calif., 1975; Democratic National Committeewoman from California, 1980-1992; staff, speaker pro tempore of the California state assembly, 1981-1982; member of the San Mateo County, Calif., board of supervisors, 1983-1992; president, San Mateo County, Calif. board of supervisors, 1986; member, California Democratic State Central Executive Committee; member of the Democratic National Commission on Presidential Nominations, 1982; unsuccessful candidate for election to the United States House of Representatives in 1988; elected as a Democrat to the One Hundred Third and to the eleven succeeding Congresses (January 3, 1993-present).",
-                "1942-12-13"
+                "BEYER, Donald Sternoff Jr., a Representative from Virginia; born in Trieste, Italy, June 20, 1950; graduated from Gonzaga College High School, Washington, D.C., 1968; B.A., Williams College, Williamstown, Mass., 1972; automobile dealer; lieutenant governor of Virginia, 1990-1998; unsuccessful candidate for Governor of Virginia in 1997; United States Ambassador to Switzerland and Liechtenstein, 2009-2013; elected as a Democrat to the One Hundred Fourteenth and to the succeeding Congress (January 3, 2015-present).",
+                "1950-06-20"
             ],
-            "photo": "https://eshoo.house.gov/wp-content/uploads/2014/07/Congresswoman_Anna_Eshoo-199x300.jpg",
+            "photo": "http://bioguide.congress.gov/bioguide/photo/B/B001292.jpg",
             "office_location": {
                 "county": "",
                 "postal_code": "20515",
                 "phone_2": "",
-                "phone_1": "(202) 225-8104",
-                "fax_1": "(202) 225-8890",
+                "phone_1": "(202) 225-4376",
+                "fax_1": "(202) 225-0017",
                 "city": "Washington",
                 "fax_2": "",
                 "state": "DC",
                 "address_1": "United States House of Representatives",
-                "address_2": "202 Cannon House Office Building",
+                "address_2": "1119 Longworth House Office Building",
                 "address_3": ""
             },
             "websites": [
-                "https://eshoo.house.gov/"
+                "https://beyer.house.gov/",
+                "http://friendsofdonbeyer.com/"
             ],
             "emails": [],
             "socials": [
                 {
-                    "official": 227083,
+                    "official": 228147,
                     "version": 1,
-                    "identifier_type": "BIOGUIDE",
+                    "identifier_type": "RSS",
                     "valid_to": "2021-01-03 00:00:00",
-                    "sk": 184504,
-                    "valid_from": "2013-01-03 00:00:00",
-                    "last_update_date": "2019-01-07 19:41:24.572271",
-                    "id": 184504,
-                    "identifier_value": "E000215"
+                    "sk": 189427,
+                    "valid_from": "2017-01-03 00:00:00",
+                    "last_update_date": "2019-01-10 14:34:31.606904",
+                    "id": 189427,
+                    "identifier_value": "https://beyer.house.gov/rss.xml"
                 },
                 {
-                    "official": 227083,
-                    "version": 1,
-                    "identifier_type": "CRP",
-                    "valid_to": "2021-01-03 00:00:00",
-                    "sk": 184505,
-                    "valid_from": "2013-01-03 00:00:00",
-                    "last_update_date": "2019-01-07 19:41:24.572271",
-                    "id": 184505,
-                    "identifier_value": "N00007335"
-                },
-                {
-                    "official": 227083,
+                    "official": 228147,
                     "version": 1,
                     "identifier_type": "VOTESMART",
                     "valid_to": "2021-01-03 00:00:00",
-                    "sk": 184506,
-                    "valid_from": "2013-01-03 00:00:00",
-                    "last_update_date": "2019-01-07 19:41:24.572271",
-                    "id": 184506,
-                    "identifier_value": "26741"
+                    "sk": 189428,
+                    "valid_from": "2017-01-03 00:00:00",
+                    "last_update_date": "2019-01-10 14:34:31.606904",
+                    "id": 189428,
+                    "identifier_value": "1707"
                 },
                 {
-                    "official": 227083,
+                    "official": 228147,
                     "version": 1,
-                    "identifier_type": "GOVTRACK",
+                    "identifier_type": "BIOGUIDE",
                     "valid_to": "2021-01-03 00:00:00",
-                    "sk": 184507,
-                    "valid_from": "2013-01-03 00:00:00",
-                    "last_update_date": "2019-01-07 19:41:24.572271",
-                    "id": 184507,
-                    "identifier_value": "400124"
+                    "sk": 189429,
+                    "valid_from": "2017-01-03 00:00:00",
+                    "last_update_date": "2019-01-10 14:34:31.606904",
+                    "id": 189429,
+                    "identifier_value": "B001292"
                 },
                 {
-                    "official": 227083,
+                    "official": 228147,
+                    "version": 1,
+                    "identifier_type": "CRP",
+                    "valid_to": "2021-01-03 00:00:00",
+                    "sk": 189430,
+                    "valid_from": "2017-01-03 00:00:00",
+                    "last_update_date": "2019-01-10 14:34:31.606904",
+                    "id": 189430,
+                    "identifier_value": "N00036018"
+                },
+                {
+                    "official": 228147,
                     "version": 1,
                     "identifier_type": "FEC",
                     "valid_to": "2021-01-03 00:00:00",
-                    "sk": 184508,
-                    "valid_from": "2013-01-03 00:00:00",
-                    "last_update_date": "2019-01-07 19:41:24.572271",
-                    "id": 184508,
-                    "identifier_value": "H8CA12098"
+                    "sk": 189432,
+                    "valid_from": "2017-01-03 00:00:00",
+                    "last_update_date": "2019-01-10 14:34:31.606904",
+                    "id": 189432,
+                    "identifier_value": "H4VA08224"
                 },
                 {
-                    "official": 227083,
+                    "official": 228147,
                     "version": 1,
-                    "identifier_type": "TWITTER",
+                    "identifier_type": "GOVTRACK",
                     "valid_to": "2021-01-03 00:00:00",
-                    "sk": 184510,
-                    "valid_from": "2013-01-03 00:00:00",
-                    "last_update_date": "2019-01-07 19:41:24.572271",
-                    "id": 184510,
-                    "identifier_value": "RepAnnaEshoo"
+                    "sk": 189434,
+                    "valid_from": "2017-01-03 00:00:00",
+                    "last_update_date": "2019-01-10 14:34:31.606904",
+                    "id": 189434,
+                    "identifier_value": "412657"
                 },
                 {
-                    "official": 227083,
+                    "official": 228147,
                     "version": 1,
                     "identifier_type": "YOUTUBE",
                     "valid_to": "2021-01-03 00:00:00",
-                    "sk": 184511,
-                    "valid_from": "2013-01-03 00:00:00",
-                    "last_update_date": "2019-01-07 19:41:24.572271",
-                    "id": 184511,
-                    "identifier_value": "RepAnnaEshoo"
+                    "sk": 189435,
+                    "valid_from": "2017-01-03 00:00:00",
+                    "last_update_date": "2019-01-10 14:34:31.606904",
+                    "id": 189435,
+                    "identifier_value": "UCPJGVbOVcAVGiBwq8qr_T9w"
                 },
                 {
-                    "official": 227083,
+                    "official": 228147,
                     "version": 1,
                     "identifier_type": "INSTAGRAM",
                     "valid_to": "2021-01-03 00:00:00",
-                    "sk": 184513,
-                    "valid_from": "2013-01-03 00:00:00",
-                    "last_update_date": "2019-01-07 19:41:24.572271",
-                    "id": 184513,
-                    "identifier_value": "RepAnnaEshoo"
+                    "sk": 189436,
+                    "valid_from": "2017-01-03 00:00:00",
+                    "last_update_date": "2019-01-10 14:34:31.606904",
+                    "id": 189436,
+                    "identifier_value": "repdonbeyer"
                 },
                 {
-                    "official": 227083,
-                    "version": 1,
-                    "identifier_type": "FACEBOOK-OFFICIAL",
-                    "valid_to": "2021-01-03 00:00:00",
-                    "sk": 184514,
-                    "valid_from": "2013-01-03 00:00:00",
-                    "last_update_date": "2019-01-07 19:41:24.572271",
-                    "id": 184514,
-                    "identifier_value": "https://www.facebook.com/RepAnnaEshoo"
-                },
-                {
-                    "official": 227083,
-                    "version": 1,
-                    "identifier_type": "LINKEDIN",
-                    "valid_to": "2021-01-03 00:00:00",
-                    "sk": 184515,
-                    "valid_from": "2013-01-03 00:00:00",
-                    "last_update_date": "2019-01-07 19:41:24.572271",
-                    "id": 184515,
-                    "identifier_value": "https://www.linkedin.com/in/anna-eshoo-b0392095/"
-                },
-                {
-                    "official": 227083,
-                    "version": 1,
-                    "identifier_type": "FACEBOOK-CAMPAIGN",
-                    "valid_to": "2021-01-03 00:00:00",
-                    "sk": 184516,
-                    "valid_from": "2013-01-03 00:00:00",
-                    "last_update_date": "2019-01-07 19:41:24.572271",
-                    "id": 184516,
-                    "identifier_value": "https://www.facebook.com/Eshoo4Congress/"
-                },
-                {
-                    "official": 227083,
+                    "official": 228147,
                     "version": 1,
                     "identifier_type": "TWITTER",
                     "valid_to": "2021-01-03 00:00:00",
-                    "sk": 184517,
-                    "valid_from": "2013-01-03 00:00:00",
-                    "last_update_date": "2019-01-07 19:41:24.572271",
-                    "id": 184517,
-                    "identifier_value": "Eshoo4Congress"
+                    "sk": 189437,
+                    "valid_from": "2017-01-03 00:00:00",
+                    "last_update_date": "2019-01-10 14:34:31.606904",
+                    "id": 189437,
+                    "identifier_value": "RepDonBeyer"
+                },
+                {
+                    "official": 228147,
+                    "version": 1,
+                    "identifier_type": "FACEBOOK-CAMPAIGN",
+                    "valid_to": "2021-01-03 00:00:00",
+                    "sk": 189438,
+                    "valid_from": "2017-01-03 00:00:00",
+                    "last_update_date": "2019-01-10 14:34:31.606904",
+                    "id": 189438,
+                    "identifier_value": "https://www.facebook.com/FriendsofDonBeyer/"
+                },
+                {
+                    "official": 228147,
+                    "version": 1,
+                    "identifier_type": "FACEBOOK-OFFICIAL",
+                    "valid_to": "2021-01-03 00:00:00",
+                    "sk": 189439,
+                    "valid_from": "2017-01-03 00:00:00",
+                    "last_update_date": "2019-01-10 14:34:31.606904",
+                    "id": 189439,
+                    "identifier_value": "https://www.facebook.com/RepDonBeyer"
+                },
+                {
+                    "official": 228147,
+                    "version": 1,
+                    "identifier_type": "LINKEDIN",
+                    "valid_to": "2021-01-03 00:00:00",
+                    "sk": 189440,
+                    "valid_from": "2017-01-03 00:00:00",
+                    "last_update_date": "2019-01-10 14:34:31.606904",
+                    "id": 189440,
+                    "identifier_value": "https://www.linkedin.com/in/don-beyer-6b444b4/"
                 }
             ]
         }
