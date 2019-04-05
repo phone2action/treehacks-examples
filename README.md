@@ -2,22 +2,25 @@
 
 ## **Code Examples and Sample Apps**
 
-These are the code snippets and sample apps we discuss in our workshop *Integrating Data from the Web Into Your App*; feel free to use these as a base for your project.
+These are the code snippets we discuss in our workshop *Integrating Data from the Web Into Your App*; feel free to use these as a base for your project.
 
-* **Java**: HTTP GET Request, Sample App
-* **Python**: HTTP GET Request, Sample App
-* **NodeJS**: HTTP GET Request, Messenger Bot, Web App
+* **Java**: [HTTP Requests](/java)
+* **Python**: [HTTP Requests](/python)
+* **NodeJS**: [HTTP Requests](/node)
+
+We also have a sample web app that uses the Phone2Action API, using VueJS:
+
+* **NodeJS** [Find Your Legislators](/node/examples/find-legislators-web)
 
 ## **Legislators API**
 
 We've opened up one of our core APIs for you to use. Phone2Action aggregates legislator data from many multiple sources to create the most complete legislators database available. You'll be able to use this data to your advantage for your HackTJ projects.
 
-Here are some sample apps that use the Phone2Action API:
+Here are some links to sample apps that use the Phone2Action API:
 
-* Sample App (Java)
-* Sample App (Python)
-* Messenger Bot (NodeJS)
-* Web App (NodeJS)
+* **Java**: [Phone2Action HTTP Request](/java/Phone2ActionGETRequest.java)
+* **Python**: [Phone2Action HTTP Request](/python/phone2action_get_request.py)
+* **NodeJS**: [Phone2Action HTTP Request](/node/Phone2ActionGETRequest.js)
 
 **Feel free to build off of these or go your own way. Phone2Action does not require you to use our API or the starter templates/ideas to win our prize. We give you complete control over that! Just make sure it has an aspect that helps people become more civically engaged.**
 
