@@ -29,4 +29,11 @@ Axios.get(baseURL, {
     var lastName = representative['last_name']
     console.log('Your Representative in national Congress is', firstName, lastName)
   })
+}).catch(function(error) {
+  if (xAPIKey === '') {
+    console.error('GET Request failed, your API Key is empty!')
+    console.error('Set the `xAPIKey` variable\'s value (line 6) to your Phone2Action API Key!')
+  } else {
+    console.error(error)
+  }
 })
