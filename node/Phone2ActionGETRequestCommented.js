@@ -15,7 +15,7 @@ var headers = {
   params: parameters,
   headers: headers
 }).then(function(response) {
-  // console.log(JSON.stringify(response.data, null, 2))
+  console.log(JSON.stringify(response.data, null, 2))
 
   // var representatives = response.data.officials
   // representatives.forEach(function(representative) {
