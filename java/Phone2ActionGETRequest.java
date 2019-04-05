@@ -9,8 +9,10 @@ import com.eclipsesource.json.*;
 // Documentation for this package here: https://github.com/ralfstx/minimal-json
 import com.eclipsesource.json.JsonObject.Member;
 
-public class Phone2ActionGETRequest {
-   public static void main(String[] args) throws IOException {
+public class Phone2ActionGETRequest 
+{
+   public static void main(String[] args) throws IOException 
+   {
       // Our Phone2Action API Key goes here
       // Super important, we need this to show that we're authorized to make our request
       String xAPIKey = ""; // Should not be an empty String, see the README for info on how to get an API Key
@@ -41,7 +43,8 @@ public class Phone2ActionGETRequest {
       // A sample JSON is also available at https://github.com/phone2action/hacktj-examples#legislators-api
       JsonArray responseRepresentatives = responseObject.get("officials").asArray();
       // We don't know what each of the keys of the response's pages will be, so we loop through all of them
-      for (JsonValue responseRepresentative : responseRepresentatives) { // Each key is a Member object, provided by Minimal JSON
+      for (JsonValue responseRepresentative : responseRepresentatives) // Each key is a Member object, provided by Minimal JSON
+      { 
           String firstName = responseRepresentative.asObject().get("first_name").asString();
           String lastName = responseRepresentative.asObject().get("last_name").asString();
           System.out.println("Your Representative in national Congress is " + firstName + " " + lastName); // We convert the key's value to a JsonObject
