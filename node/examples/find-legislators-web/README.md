@@ -22,7 +22,7 @@ yarn install
 This is the development server, which refreshes as you change and save files! 
 
 ```
-npm install
+npm run serve
 ```
 
 ```
