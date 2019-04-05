@@ -16,11 +16,11 @@ public class Phone2ActionGETRequest {
       String xAPIKey = ""; // Should not be an empty String, see the README for info on how to get an API Key
 
       // First, we construct the URL we'll make our HTTP GET Request to:
-      String baseAPI = "https://fmrrixuk32.execute-api.us-east-1.amazonaws.com/hacktj/legislators";
+      String endpoint = "https://fmrrixuk32.execute-api.us-east-1.amazonaws.com/hacktj/legislators";
       String parameters = "?level=NATIONAL_LOWER&address=";
       String address = "6560 Braddock Rd"; // Change this to match your address!
       String addressFormatted = URLEncoder.encode(address, "UTF-8"); // This formats the article title for our URL
-      URL phone2ActionURL = new URL(baseAPI + parameters + addressFormatted); // This is the Java URL class, necessary here
+      URL phone2ActionURL = new URL(endpoint + parameters + addressFormatted); // This is the Java URL class, necessary here
 
       // Then, we set up the HTTP GET Request itself
       HttpURLConnection connection = (HttpURLConnection) phone2ActionURL.openConnection();

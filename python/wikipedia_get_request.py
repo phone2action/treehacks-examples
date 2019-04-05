@@ -6,7 +6,7 @@ import json
 
 # First, we define our base URL and our parameters
 # Our parameters can be a Dictionary, since the `requests` module converts them
-base_URL = 'https://en.wikipedia.org/w/api.php'
+endpoint = 'https://en.wikipedia.org/w/api.php'
 parameters = {
   'format': 'json',
   'action': 'query',
@@ -18,7 +18,7 @@ parameters = {
 }
 
 # Now, we're able to fire the configured HTTP GET request
-response = requests.get(base_URL, params=parameters)
+response = requests.get(endpoint, params=parameters)
 
 # Next, we convert the response to a JSON with `json.loads()`
 pages = json.loads(response.text)['query']['pages']

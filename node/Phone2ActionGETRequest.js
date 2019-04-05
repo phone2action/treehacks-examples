@@ -10,7 +10,7 @@ Axios.defaults.headers.common['X-API-Key'] = xAPIKey // We apply the API Key to 
 
 // First, we define our base URL and our parameters
 // Our parameters can be a JSON, since Axios will convert them
-var baseURL = 'https://fmrrixuk32.execute-api.us-east-1.amazonaws.com/hacktj/legislators'
+var endpoint = 'https://fmrrixuk32.execute-api.us-east-1.amazonaws.com/hacktj/legislators'
 var parameters = {
   'level': 'NATIONAL_LOWER',
   'address': '6560 Braddock Rd'
@@ -18,7 +18,7 @@ var parameters = {
 
 // Now, we're able to fire the configured HTTP GET request
 // Axios uses JavaScript Promises, so it'll call `.then()` when done
-Axios.get(baseURL, {
+Axios.get(endpoint, {
   params: parameters
 }).then(function(response) {
   var representatives = response.data.officials

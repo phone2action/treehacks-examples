@@ -12,7 +12,7 @@ x_api_key = '' # Should not be empty
 # First, we define our base URL and our parameters
 # Our parameters can be a Dictionary, since the `requests` module converts them
 # Our headers can also be a Dictionary, `requests` converts these as well
-base_URL = 'https://fmrrixuk32.execute-api.us-east-1.amazonaws.com/hacktj/legislators'
+endpoint = 'https://fmrrixuk32.execute-api.us-east-1.amazonaws.com/hacktj/legislators'
 parameters = {
   'level': 'NATIONAL_LOWER',
   'address': '6560 Braddock Rd'
@@ -22,7 +22,7 @@ headers = {
 }
 
 # Now, we're able to fire the configured HTTP GET request
-response = requests.get(base_URL, params=parameters, headers=headers)
+response = requests.get(endpoint, params=parameters, headers=headers)
 
 # Next, we convert the response to a JSON with `json.loads()`
 representatives = json.loads(response.text)['officials']

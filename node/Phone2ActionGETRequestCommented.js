@@ -2,7 +2,7 @@
 
 // var xAPIKey = ''
 
-/* var baseURL = 'https://fmrrixuk32.execute-api.us-east-1.amazonaws.com/hacktj/legislators'
+/* var endpoint = 'https://fmrrixuk32.execute-api.us-east-1.amazonaws.com/hacktj/legislators'
 var parameters = {
   'level': 'NATIONAL_LOWER',
   'address': '6560 Braddock Rd'
@@ -11,7 +11,7 @@ var headers = {
   'X-API-Key': xAPIKey
 } */
 
-/* Axios.get(baseURL, {
+/* Axios.get(endpoint, {
   params: parameters,
   headers: headers
 }).then(function(response) {
